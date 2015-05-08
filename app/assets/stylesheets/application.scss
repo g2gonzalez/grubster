@@ -1,0 +1,112 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Righteous);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Sigmar+One);
+
+$navy-blue: #242d36;
+$flat-red: #f45145;
+$bg-gray: #d4d7dc;
+$font-gray: #727272;
+$light-gray: #f0f3f3;
+$white_opaque: rgba(250, 250, 250, .3);
+
+$navbar-default-bg: transparent;
+$navbar-border-radius: 0px;
+$navbar-height: 95px;
+$navbar-default-brand-color: white;
+$navbar-default-brand-hover-color: white;
+
+$jumbotron-bg: $white_opaque;
+
+@import "bootstrap";
+
+html {
+	height: 100%;
+}
+
+body {
+	text-align: center;
+	padding-top: 150px;
+	background: -webkit-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+  background:    -moz-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+  background:     -ms-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+  background:      -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+  background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+}
+
+.center {
+	text-align: center;
+}
+
+.navbar {
+	.navbar-brand {
+		font-family: 'Lobster', cursive;
+		font-size: 40px;
+	}
+}
+
+.jumbotron {
+	.main-title {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+		font-family: 'Sigmar One', cursive;
+	}
+	.sub-title {
+		margin-top: -2px; 
+	}
+	.hint {
+		font-size: 14px;
+		margin-bottom: 50px;
+	}
+}
+
+form {
+	width: 450px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 15px;
+	.form-control {
+		margin-right: 5px;
+		::-webkit-input-placeholder { 
+			color: $light-gray; 
+		}
+	}
+	.btn-default {
+		border: 2px solid #333;
+		background: transparent;
+		&:hover {
+			border: 2px solid #333;
+			background: #333;
+			color: white;
+		}
+	}
+}
+
+footer{
+	background:transparent;
+	width:100%;
+	height:55px;
+	position:absolute;
+	bottom:0;
+	p {
+		font-size: 17px;
+		padding-top: 10px;
+	}
+}

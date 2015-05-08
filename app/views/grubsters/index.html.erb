@@ -1,1 +1,13 @@
-<h1>Welcome to Grubster</h1>
+<div class="jumbotron">
+	<h1 class="main-title">Enter your digits below</h1>
+	<h1 class="sub-title"><small>We'll take care of the hard stuff</small></h1>
+	<p class="hint">(Hint: Enter your digits with no dashes or spaces)</p>
+
+	<!-- form to grab phone number from user -->
+	<form action="/send_msg" method="post" class="form-inline">
+		<div class="form-group">
+			<input type="text" class="form-control input-lg" name="phone_num" placeholder="e.g. 1112223333">
+		</div>
+		<button type="submit" class="btn btn-default btn-lg">Send Message</button>
+	</form>
+</div>

@@ -1,1 +1,12 @@
-send_msg.html.erb
+<div class="jumbotron">
+	<!-- loop to grab number and name to send to -->
+	<% @friends.each do |p_num, p_name| %>		
+		<% @client.account.messages.create( %>
+		  <% :from => @from, %>
+		  <% :to => p_num, %>
+		  <% :body => "Hey #{p_name}! You should check out #{@name} (#{@mobile_url}), it's only #{@miles} miles away!", %>
+		  <% :media_url => @image_url %>
+		<% ) %>
+		<h2 class="main-title"><%= p_name %>, your message is on its way</h2>
+	<% end %>
+</div>
