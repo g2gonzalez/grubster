@@ -8,7 +8,7 @@ class GrubstersController < ApplicationController
 		phone_num = params['phone_num']		#assign user phone number
 		
 		#******************Whitepages Setup**********************
-		api_key = "acf2526334d412df2e84b837c887fc4e"
+		api_key = "xxxx"
 		api_url = "https://proapi.whitepages.com/2.1/phone.json?api_key=#{api_key}&phone_number=#{phone_num}"
 		response = HTTParty.get(api_url).parsed_response
 		first_name = response['results'][0]['belongs_to'][0]['names'][0]['first_name']
